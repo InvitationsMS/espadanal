@@ -1,0 +1,20 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.bg-light {
+  background-color: var(--gray-50);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

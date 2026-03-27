@@ -1,0 +1,6 @@
+/* App.css - Clear or add App-specific styles here */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

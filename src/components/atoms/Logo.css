@@ -1,0 +1,36 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  transition: all var(--transition-fast);
+}
+
+.logo-image {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+
+.logo-container:hover .logo-image {
+  transform: scale(1.05);
+}
+
+/* Sizing controls based on the size prop */
+.logo-sm .logo-image {
+  height: 35px;
+}
+
+.logo-md .logo-image {
+  height: 50px;
+}
+
+.logo-lg .logo-image {
+  height: 70px;
+}
+
+@media (max-width: 576px) {
+  .logo-md .logo-image {
+    height: 40px;
+  }
+}

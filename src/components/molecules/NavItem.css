@@ -1,0 +1,37 @@
+.nav-item {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gray-800);
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-item:hover {
+  color: var(--primary-blue);
+}
+
+.nav-item-underline {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0.75rem;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-yellow);
+  transition: width var(--transition-normal);
+}
+
+.nav-item:hover .nav-item-underline,
+.nav-item.active .nav-item-underline {
+  width: calc(100% - 1.5rem);
+}
+
+.nav-item.active {
+  color: var(--primary-blue);
+  font-weight: 700;
+}
