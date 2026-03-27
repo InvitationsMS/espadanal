@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
     <section id="inicio" className="hero">
       <div className="hero-background">
         <img
-          src="/images/bg-hero.png"
+          src={`${import.meta.env.BASE_URL}images/bg-hero.png`}
           alt="Hydraulic hoses"
           className="hero-image"
         />
