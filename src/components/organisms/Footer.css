@@ -20,7 +20,7 @@
 }
 
 .footer-mission {
-  color: var(--gray-600);
+  color: var(--gray-200);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -43,9 +43,9 @@
 }
 
 .social-link:hover {
-  background-color: var(--primary-blue);
+  background-color: var(--white);
   transform: translateY(-4px);
-  color: var(--accent-yellow);
+  color: var(--bg-color);
 }
 
 .footer-title {
@@ -62,7 +62,7 @@
 }
 
 .footer-links a {
-  color: var(--gray-600);
+  color: var(--gray-200);
   transition: color var(--transition-fast);
   font-size: 0.95rem;
 }
@@ -73,7 +73,7 @@
 }
 
 .footer-newsletter p {
-  color: var(--gray-600);
+  color: var(--gray-200);
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
 }
@@ -112,12 +112,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--gray-600);
+  color: var(--gray-200);
   font-size: 0.875rem;
 }
 
 .scroll-top {
-  background-color: var(--primary-blue);
+  background-color: var(--surface-color);
   color: var(--white);
   width: 44px;
   height: 44px;

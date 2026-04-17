@@ -33,11 +33,11 @@ export const Hero: React.FC = () => {
               Nos especializamos en la distribución de mangueras hidráulicas y componentes para sistemas de conducción de fluidos. Ofrecemos asesoría técnica, selección de productos y soporte para asegurar un funcionamiento seguro y eficiente en cada aplicación.
             </p>
             <div className="hero-actions">
-              <Button size="lg" variant="secondary" onClick={() => window.location.href = '#catalogos'}>
+              <Button size="lg" variant="primary" onClick={() => window.location.href = '#catalogos'}>
                 Ver Catálogos
                 <ChevronRight size={20} />
               </Button>
-              <Button size="lg" variant="outline" className="hero-secondary-btn" onClick={() => window.location.href = '#contacto'}>
+              <Button size="lg" variant="outline" onClick={() => window.location.href = '#contacto'}>
                 Contáctanos
               </Button>
             </div>

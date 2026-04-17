@@ -2,86 +2,116 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: all var(--transition-fast);
+  font-family: var(--font-display);
+  font-weight: 700;
+  border-radius: 12px;
+  transition: all var(--transition-normal);
   cursor: pointer;
   white-space: nowrap;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: -1;
+  transition: opacity var(--transition-normal);
+  opacity: 0;
 }
 
 .btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
-/* Variants */
+/* Primary Button (Glorious Gradient) */
 .btn-primary {
-  background-color: var(--primary-blue);
+  background: var(--grad-primary);
   color: var(--white);
-  box-shadow: 0 4px 14px 0 rgba(0, 78, 146, 0.39);
+  box-shadow: var(--glow-red);
+  border: none;
 }
-
+.btn-primary::before {
+  background: var(--grad-glow); /* Animated or different angle gradient on hover */
+  background-size: 200% auto;
+}
 .btn-primary:hover {
-  background-color: var(--primary-blue-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 78, 146, 0.23);
+  transform: translateY(-3px) scale(1.02);
+}
+.btn-primary:hover::before {
+  opacity: 1;
 }
 
+/* Secondary Button (Dark Glass with Border Glow) */
 .btn-secondary {
-  background-color: var(--accent-yellow);
-  color: var(--gray-900);
-  box-shadow: 0 4px 14px 0 rgba(255, 204, 0, 0.39);
+  background: var(--surface-color);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
-
 .btn-secondary:hover {
-  background-color: var(--accent-yellow-dark);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--brand-orange);
+  color: var(--brand-orange);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 204, 0, 0.23);
 }
 
+/* Outline Button (Neon Edge) */
 .btn-outline {
   background-color: transparent;
-  color: var(--primary-blue);
-  border: 2px solid var(--primary-blue);
+  color: var(--brand-red);
+  border: 2px solid var(--brand-red);
 }
-
 .btn-outline:hover {
-  background-color: var(--primary-blue);
+  background-color: var(--brand-red);
   color: var(--white);
+  box-shadow: var(--glow-red);
+  transform: translateY(-2px);
 }
 
+/* Ghost Button */
 .btn-ghost {
   background-color: transparent;
-  color: var(--gray-800);
+  color: var(--section-text-muted);
 }
-
 .btn-ghost:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.btn-danger {
-  background-color: var(--accent-red);
   color: var(--white);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
+/* Danger Button */
+.btn-danger {
+  background-color: rgba(204, 0, 0, 0.2);
+  color: #ff4d4d;
+  border: 1px solid rgba(204, 0, 0, 0.4);
+}
 .btn-danger:hover {
-  background-color: var(--accent-red-dark);
+  background-color: #cc0000;
+  color: var(--white);
 }
 
 /* Sizes */
 .btn-sm {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.8rem;
+  border-radius: 8px;
 }
-
 .btn-md {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 0.9rem;
 }
-
 .btn-lg {
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
+  padding: 1.2rem 2.4rem;
+  font-size: 1rem;
+  border-radius: 14px;
 }
 
 .btn-full-width {

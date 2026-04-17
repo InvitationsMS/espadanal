@@ -26,7 +26,7 @@ export const CatalogSection: React.FC = () => {
   ];
 
   return (
-    <section id="catalogos" className="section bg-light">
+    <section id="catalogos" className="section theme-light bg-light">
       <div className="container">
         <div className="section-title">
           <h2>Nuestros Catálogos</h2>

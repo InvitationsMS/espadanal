@@ -2,7 +2,7 @@
   position: relative;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--gray-800);
+  color: var(--gray-200);
   padding: 0.5rem 0.75rem;
   text-decoration: none;
   transition: all var(--transition-fast);
@@ -12,7 +12,8 @@
 }
 
 .nav-item:hover {
-  color: var(--primary-blue);
+  color: var(--white);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .nav-item-underline {
@@ -22,7 +23,8 @@
   left: 0.75rem;
   width: 0;
   height: 2px;
-  background-color: var(--accent-yellow);
+  background: var(--grad-primary);
+  box-shadow: var(--glow-red);
   transition: width var(--transition-normal);
 }
 
@@ -32,6 +34,6 @@
 }
 
 .nav-item.active {
-  color: var(--primary-blue);
+  color: var(--white);
   font-weight: 700;
 }

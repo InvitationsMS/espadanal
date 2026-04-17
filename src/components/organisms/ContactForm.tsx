@@ -6,7 +6,7 @@ import './ContactForm.css';
 
 export const ContactForm: React.FC = () => {
   return (
-    <section id="contacto" className="section contact-section bg-dark">
+    <section id="contacto" className="section contact-section theme-light bg-dark">
       <div className="container contact-container">
         <div className="contact-info-side">
           <div className="section-title text-left">

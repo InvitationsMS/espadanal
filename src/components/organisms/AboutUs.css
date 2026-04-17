@@ -1,5 +1,5 @@
 .about-us {
-  background-color: var(--white);
+  background-color: transparent;
   overflow: hidden;
 }
 
@@ -36,7 +36,7 @@
   flex-direction: column;
   align-items: center;
   box-shadow: var(--shadow-xl);
-  border: 4px solid var(--white);
+  border: 4px solid var(--surface-color);
 }
 
 .years {
@@ -66,12 +66,12 @@
   font-size: 2.75rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
-  color: var(--gray-900);
+  color: var(--white);
 }
 
 .about-description {
   font-size: 1.1rem;
-  color: var(--gray-600);
+  color: var(--gray-200);
   margin-bottom: 2rem;
 }
 
@@ -86,7 +86,7 @@
   align-items: center;
   gap: 1rem;
   font-weight: 600;
-  color: var(--gray-800);
+  color: var(--gray-100);
 }
 
 .point-icon {

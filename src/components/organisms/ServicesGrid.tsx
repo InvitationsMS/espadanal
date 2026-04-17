@@ -28,7 +28,7 @@ export const ServicesGrid: React.FC = () => {
   ];
 
   return (
-    <section id="servicios" className="section bg-light">
+    <section id="servicios" className="section theme-light bg-light">
       <div className="container">
         <div className="section-title">
           <h2>Nuestros Servicios</h2>
