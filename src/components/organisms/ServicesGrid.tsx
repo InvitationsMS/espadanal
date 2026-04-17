@@ -1,9 +1,15 @@
 import React from 'react';
 import { Card } from '../molecules/Card';
 import { Wrench, Settings, Truck, Microscope } from 'lucide-react';
+import { COMPANY_INFO } from '../../constants/company-info';
 import './ServicesGrid.css';
 
 export const ServicesGrid: React.FC = () => {
+  const handleServiceConsultation = (title: string) => {
+    const whatsappNumber = COMPANY_INFO.contact.whatsapp[0].replace(/[^0-9]/g, '');
+    const message = `Hola, me interesa el servicio de: ${title}`;
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+  };
   const services = [
     {
       title: 'Fabricación a Medida',
@@ -44,6 +50,7 @@ export const ServicesGrid: React.FC = () => {
               description={service.description}
               icon={service.icon}
               actionText="Consultar"
+              onAction={() => handleServiceConsultation(service.title)}
             />
           ))}
         </div>

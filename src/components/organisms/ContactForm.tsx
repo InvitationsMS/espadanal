@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../atoms/Button';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
 import { COMPANY_INFO } from '../../constants/company-info';
 import './ContactForm.css';
 
@@ -13,13 +13,23 @@ export const ContactForm: React.FC = () => {
             <h2 className="text-white">¿Hablemos de su proyecto?</h2>
             <p className="text-gray">Estamos listos para brindarle la mejor asesoría técnica para sus necesidades hidráulicas.</p>
           </div>
-          
+
           <div className="info-list">
             <div className="info-item">
               <div className="info-icon"><Phone size={24} /></div>
               <div className="info-text">
-                <span className="info-label">Teléfono</span>
-                <span className="info-value">{COMPANY_INFO.contact.phone}</span>
+                <span className="info-label">Teléfonos y WhatsApp</span>
+                <div className="info-values">
+                  {COMPANY_INFO.contact.whatsapp.map((ws, index) => (
+                    <a key={`ws-${index}`} href={`https://wa.me/${ws.replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="info-value">
+                      {ws}
+                      <span className="whatsapp-tag">
+                        <MessageCircle size={12} />
+                        WhatsApp
+                      </span>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="info-item">
@@ -41,11 +51,12 @@ export const ContactForm: React.FC = () => {
               <div className="info-text">
                 <span className="info-label">Horario de Atención</span>
                 <span className="info-value">{COMPANY_INFO.contact.workingHours}</span>
+                <span className="info-value">{COMPANY_INFO.contact.workingHoursWeekend}</span>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div className="contact-form-side">
           <form className="contact-form glass">
             <div className="form-group">

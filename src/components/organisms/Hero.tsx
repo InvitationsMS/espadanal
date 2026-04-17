@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '../atoms/Button';
 import { COMPANY_INFO } from '../../constants/company-info';
 import { ChevronRight, Shield, Clock, Award } from 'lucide-react';
-import bgHero from '../../assets/images/bg-hero.png';
+import bgHero from '../../assets/images/bg-hero.jpeg';
 import './Hero.css';
 
 export const Hero: React.FC = () => {
